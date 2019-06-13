@@ -1,0 +1,25 @@
+header{
+  background-color: grey;
+  height:60vh;
+}
+
+.container{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .headerTitle{
+  margin-top: 15%;
+  text-align: center;
+  }
+    .navLink{
+      display: flex;
+      justify-content: center;
+      
+      a{
+        margin: 3% 5%;
+        color:black;
+      }
+    }
+}

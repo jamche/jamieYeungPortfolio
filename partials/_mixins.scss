@@ -1,0 +1,10 @@
+@mixin fontHeaders($family, $size, $color){
+  // font-family: 'Poppins', sans-serif;
+  // font-family: 'Raleway', sans-serif;
+  font-family: ($family);
+  font-size:($size);
+  color:($color);
+}
+@mixin buttonStyle {
+  
+}

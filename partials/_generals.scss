@@ -1,0 +1,24 @@
+.wrapper{
+  margin: 0 10%;
+  max-width: 1400px;
+}
+
+h1,h2,h3,h4,h5,h6,ul,li,a,p{
+  margin: 0;
+  padding: 0;
+}
+ul{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+p,a,li{
+  line-height: 1.5;
+  font-size: 20px;
+}
+
+img{
+  display: block;
+  width: 100%;
+}

@@ -1,0 +1,31 @@
+.svgting{
+  color: black;
+}
+
+.skillSquares{
+  display: flex;
+  margin: 3% 0;
+  .skillSquaresLeft,
+  .skillSquaresRight{
+    width: 45%;
+  }
+  .skillSquaresRight{
+    display: flex;
+    flex-direction: column;
+    margin-left:0;
+    justify-content: center;
+    .skillSquaresRightTitle{
+      text-align: left;
+      font-size: 50px;
+    }
+    .skillSquaresIcons{
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      i{
+        font-size: 60px;
+        margin: 1%;
+      }
+    }
+  }
+}
