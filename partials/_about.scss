@@ -1,11 +1,25 @@
 .aboutContainer{
-  text-align: center;
-  h2{
-    margin: 3% 0 2%;
-    text-align: center;
+  display: flex;
+  margin-top: 2%;
+  .aboutPicture,
+  .aboutText{
+    width: calc(100% - 2%);
+    margin: 2%;
   }
-  p{
-    text-align: left;
+  .aboutText
+    h2{
+      margin: 3% 0 2%;
+      text-align: center;
+    }
+    p{
+      text-align: left;
+    }
+  .aboutPicture{  
+    img{
+      border-radius: 50% 50%;
+      width: 400px;
+      height: 400px;
+      object-fit: cover;
+    }
   }
-  
 }

@@ -10,6 +10,8 @@
     width: 45%;
   }
   .skillSquaresRight{
+    background-image: url(/assets/plus.svg);
+    background-size:200px 200px;
     display: flex;
     flex-direction: column;
     margin-left:0;
@@ -25,6 +27,12 @@
       i{
         font-size: 60px;
         margin: 1%;
+      }
+      .firebaseLogo{
+        margin: 1%;
+        img{
+          height: 100%;
+        }
       }
     }
   }

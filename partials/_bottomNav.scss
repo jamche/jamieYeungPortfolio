@@ -1,0 +1,15 @@
+.bottomNav{
+  display: flex;
+  justify-content: space-between;
+  .bottomNavContainer,
+  .bottomIconsContainer{
+    width: 50%;
+  }
+  .bottomNavContainer{
+    display: flex;
+    flex-direction: column;
+  }
+    .bottomNavLink{
+      display: flex;
+    }
+}

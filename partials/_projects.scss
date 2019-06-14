@@ -1,0 +1,13 @@
+.projectsContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  div img{
+    width: initial;
+  }
+}
+  .projectsContainerList{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }

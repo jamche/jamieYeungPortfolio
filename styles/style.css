@@ -246,16 +246,34 @@ header {
 }
 
 .aboutContainer {
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2%;
 }
 
-.aboutContainer h2 {
+.aboutContainer .aboutPicture,
+.aboutContainer .aboutText {
+  width: calc(100% - 2%);
+  margin: 2%;
+}
+
+.aboutContainer .aboutText
+h2 {
   margin: 3% 0 2%;
   text-align: center;
 }
 
 .aboutContainer p {
   text-align: left;
+}
+
+.aboutContainer .aboutPicture img {
+  border-radius: 50% 50%;
+  width: 400px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .svgting {
@@ -275,6 +293,8 @@ header {
 }
 
 .skillSquares .skillSquaresRight {
+  background-image: url(/assets/plus.svg);
+  background-size: 200px 200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -305,6 +325,86 @@ header {
 .skillSquares .skillSquaresRight .skillSquaresIcons i {
   font-size: 60px;
   margin: 1%;
+}
+
+.skillSquares .skillSquaresRight .skillSquaresIcons .firebaseLogo {
+  margin: 1%;
+}
+
+.skillSquares .skillSquaresRight .skillSquaresIcons .firebaseLogo img {
+  height: 100%;
+}
+
+.projectsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.projectsContainer div img {
+  width: initial;
+}
+
+.projectsContainerList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contactMeForm {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.contactMeForm form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bottomNav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bottomNav .bottomNavContainer,
+.bottomNav .bottomIconsContainer {
+  width: 50%;
+}
+
+.bottomNav .bottomNavContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.bottomNav .bottomNavLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 footer {
