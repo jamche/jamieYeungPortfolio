@@ -1,6 +1,10 @@
 header{
   background-color: grey;
-  height:60vh;
+  background: url(../assets/headerPicHangar.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat; 
+  height:70vh;
 }
 
 .container{
@@ -13,16 +17,23 @@ header{
   margin-top: 15%;
   text-align: center;
       h1{
-      @include fontHeaders(Poppins, 90px, black);
+      @include fontHeaders(Poppins, 60px, seashell);
     }
   }
     .navLink{
       display: flex;
       justify-content: center;
+      @include fontHeaders (Raleway, 20px, seashell);
       
       a{
         margin: 3% 5%;
-        color:black;
+        color:seashell;
+        transition: all 0.4s ease;
       }
     }
+}
+
+.navLink a:active,
+.navLink a:hover{
+  color: #1bf1ad;
 }

@@ -1,13 +1,11 @@
-.svgting{
-  color: black;
-}
-
 .skillSquares{
-  display: flex;
-  margin: 3% 0;
-  background: url(../assets/backgroungSkills.jpeg);
-  background-position: center;
+  background: url(../assets/backgroundSkills.jpeg);
+  background-position: left;
   background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat-y;
+  display: flex;
+  margin: 5% 0;
   .skillSquaresLeft,
   .skillSquaresRight{
     width: 45%;
@@ -16,41 +14,34 @@
     margin-right: 2.5%;
   }
   .skillSquaresRight{
-    background-image: url(../assets/dots.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position:center bottom;
+    // background-image: url(../assets/dots.svg);
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position:center;
     display: flex;
     flex-direction: column;
     margin-left:2.5%;
     justify-content: center;
     .skillSquaresRightTitle{
-      text-align: left;
+      text-align: center;
       font-size: 50px;
     }
     .skillSquaresRightTitle{
       h3{
-        @include fontHeaders(Poppins, 60px, black);
+        @include fontHeaders(Poppins, 40px, black);
       }
     }
     .skillSquaresIcons{
-      display: flex;
-      width: 100%;
-      i{
-        font-size: 60px;
-        margin: 1%;
-      }
-      .skillSquaresIcons{
-        width: 50%;
-      }  
-      // change firebase and responsive design
-      .firebaseLogo,
-      .responsiveLogo{
-        display: inline-block;
-        margin: 1%;
-        width: 60px;
-        height: 60px;
+
+      .skillSquaresIconsBlock{ 
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+        i{
+          font-size: 50px;
+          margin: 2%;
         }
       }
     }
-}
+  }
+} 

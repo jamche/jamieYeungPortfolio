@@ -21,11 +21,11 @@
     <div class="menu">
       <nav>
         <ul class="navLink">
-          <a href="#"><li>Home</li></a>
-          <a href="#"><li>About</li></a>
-          <a href="#"><li>Skills</li></a>
-          <a href="#"><li>Projects</li></a>
-          <a href="#"><li>Contact</li></a>
+          <a href="index.html"><li>Home</li></a>
+          <a href="#about"><li>About</li></a>
+          <a href="#skills"><li>Skills</li></a>
+          <a href="#projects"><li>Projects</li></a>
+          <a href="#contact"><li>Contact</li></a>
         </ul>
       </nav>
     </div>
@@ -34,18 +34,18 @@
 
 <main>
   <!-- about section -->
-  <section>
+  <section id="about">
     <div class="aboutContainer wrapper">
     <div class="aboutPicture">
       <a href="#"> <img src="assets/2019-Spring-Jamie-Yeung-Yam-Wah-2.jpg" alt="photo of Jamie Yeung"></a>
     </div>
     <div class="aboutText">
       <h2>About Me</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, possimus assumenda! Doloribus sint fuga id saepe consequuntur aliquam, tempore eaque eveniet, velit dignissimos dicta optio praesentium ducimus minima rem tenetur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio, perspiciatis! Incidunt aliquid soluta consequatur saepe, doloribus consequuntur totam adipisci unde, iure tempora debitis facere quam cum voluptatum, sint expedita assumenda.</p>
+      <p>Hi there! My name is Jamie and I recently graduated from HackerYou's Web Development Immersive Bootcamp Program. I have a passion for coding and continuously learning about new programming concepts. When I'm not coding you can find me either travelling, doing some kind of physical activity or following the Financial Markets due to my previous work in the Financial Industry. </p>
     </div>
   </section>
 <!-- skills  -->
-  <section>
+  <section id="skills">
     <div class="skillSquares">
       <div class="skillSquaresLeft">
         <div>
@@ -61,6 +61,8 @@
             <i class="devicon-html5-plain colored"></i>
             <i class="devicon-css3-plain colored"></i>
             <i class="devicon-sass-original colored"></i>
+          </div>
+          <div class="skillSquaresIconsBlock">  
             <i class="devicon-javascript-plain colored"></i>
             <i class="devicon-jquery-plain colored"></i>
             <i class="devicon-react-original colored"></i>
@@ -69,42 +71,54 @@
             <i class="devicon-git-plain colored"></i>
             <i class="devicon-github-plain colored"></i>
             <i class="devicon-visualstudio-plain colored"></i>
+          </div>
+          <!-- <div class="skillSquaresIconBlock">
             <i class="fas fa-terminal"></i>
             <img class="firebaseLogo" src="https://img.icons8.com/color/48/000000/firebase.png" alt="firebaselog">
             <img class="responsiveLogo" src="assets/responsive-design.png" alt="">
+          </div> -->
           </div>
          </div> 
       </div>
     </div>
   </section>
 <!-- projects -->
-  <section>
+  <section id="projects">
     <div class="projectsContainer wrapper">
       <div class="projectsContainerTitle">
         <h3>Projects</h3>
       </div>
       <div class="projectsContainerList">
-          <div class="projects">
+        <!-- drive solo projec -->
+          <div class="projects galleryCell">
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
               <i class="devicon-sass-original colored"></i>
             </div>
             <p>First responsive PSD project completed using only floats.</p>
-            <a href="#"> <img src="assets/carProject.png" alt=""></a>
+            <div class="projectsLinks"> 
+              <a href="https://jamche.github.io/jamieYeungProjectOne/">Live</a>
+              <a href="https://github.com/jamche/jamieYeungProjectOne">Github</a>
+            </div>
+             <img src="assets/carProject.png" alt=""></a>
           </div>
-          <!-- psd of intro back -->
-          <div class="projects">
+          <!-- project two yoga -->
+          <div class="projects galleryCell">
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
               <i class="devicon-sass-original colored"></i>
             </div>
             <p>First multi page responsive PSD project using flexbox and making our own decision on the mobile design.</p>
-            <a href="#"> <img src="assets/mindSoul.png" alt=""></a>
+            <div class="projectsLinks">
+              <a href="https://jamche.github.io/jamieYeungProjectTwo/">Live</a>
+              <a href="https://github.com/jamche/jamieYeungProjectTwo">Github</a>
+            </div>
+              <img src="assets/mindSoul.png" alt=""></a>
           </div>
           <!-- group jquery or group react -->
-          <div class="projects">
+          <div class="projects galleryCell">
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
@@ -112,20 +126,28 @@
               <i class="devicon-jquery-plain colored"></i>
             </div>
             <p>A paired jQuery project using The MovieDB API  which recommends a movie or tv show to watch based on the genre and mood the user selects. Created with Tommy Lay</p>
-           <a href="#"> <img src="assets/movieProjectL.jpg" alt=""></a>
+            <div class="projectsLinks">
+              <a href="https://codewithtommy.github.io/helpMeWatch/">Live</a>
+              <a href="https://github.com/codewithtommy/helpMeWatch/">Github</a>
+            </div>
+              <img src="assets/movieProjectL.jpg" alt=""></a>
           </div>
           <!-- react project -->
-          <div class="projects">
+          <div class="projects galleryCell">
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
               <i class="devicon-react-original colored"></i>
             </div>
             <p>First React project using the NY Times Books API to provide the user with a book recommendation from the NY Times best sellers of the week.</p>
-            <a href="#"> <img src="assets/randomBook.png" alt=""></a>
+            <div class="projectsLinks">
+              <a href="https://jamche.github.io/jamieYeungRandomBookProject/">Live</a>
+              <a href="https://github.com/jamche/jamieYeungRandomBookProject">Github</a>
+            </div>
+              <img src="assets/randomBook.png" alt=""></a>
           </div>
           <!-- group jquery or group react -->
-          <div class="projects">
+          <div class="projects galleryCell">
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
@@ -135,35 +157,19 @@
               <i class="devicon-github-plain colored"></i>
             </div>
             <p>A collaborative project using React & the Ticketmaster API. The app provides users the option to go to seperate events at a similar time and location, because sometimes you might just need a break from your partner! Created with Can Rozanes, Annie Liew & Irene Truong</p>
-            <a href="#"> <img src="assets/personalDate.png" alt=""></a>
+            <div class="projectsLinks">
+              <a href="https://caij-consulting.github.io/personal-date-night/">Live</a>
+              <a href="https://github.com/caij-consulting/personal-date-night">Github</a>
+            </div>
+            <a href="https://caij-consulting.github.io/personal-date-night/"></a> <img src="assets/personalDate.png" alt=""></a>
           </div>
       </div>
     </div>
   </section>
-<!-- contact -->
-  <!-- <section>
-    <div class="contactMeForm">
-      <h1>Contact Me!</h1>
-      <form class="wrapper">
-        <label for="name" class="visuallyHidden">Your Name</label>
-        <input type="text" name="name" placeholder="Your Name" />
-
-        <label for="email" class="visuallyHidden"></label>
-        <input type="email" name="email" placeholder="Email Address" />
-        
-        <textarea name="field3" placeholder="Enter a Message"></textarea>
-
-        <button>Submit your message</button>
-      </form>
-    </div>
-  </section> -->
-
-  <!-- bottom Nav -->
- 
 </main>
-
+<!-- bottom Nav -->
 <footer>
-  <section>
+  <section id="contact">
     <div class="bottomNav wrapper">
       <div class="bottomNavContainer">
         <div class="bottomNavTitle">
@@ -172,9 +178,7 @@
         <div class="bottomMenu">
           <nav>
             <ul class="bottomNavLink">
-              <a href="#">
-                <li>Home</li>
-              </a>
+              <a href="#"><li>Home</li></a>
               <a href="#">
                 <li>About</li>
               </a>

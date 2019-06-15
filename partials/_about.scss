@@ -1,4 +1,9 @@
 .aboutContainer{
+  background: url(../assets/backgroundSkills.jpeg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat-y;
   display: flex;
   margin-top: 2%;
   .aboutPicture,
@@ -7,11 +12,14 @@
     margin: 2%;
   }
   .aboutText
+
     h2{
+      @include fontHeaders('Poppins', 26px, black);
       margin: 3% 0 2%;
       text-align: center;
     }
     p{
+      @include fontHeaders('Raleway', 20px, black);
       text-align: left;
     }
   .aboutPicture{  

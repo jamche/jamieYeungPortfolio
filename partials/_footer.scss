@@ -1,3 +1,7 @@
+footer{
+  margin-top: 2%;
+  border-top: 1px solid rgba(0, 0, 0, .05);
+
 .bottomNav{
   display: flex;
   justify-content: space-between;
@@ -17,13 +21,17 @@
     .bottomNavTitle,
     .bottomMenu{
       margin: 2% 0;
-      @include fontHeaders('Poppins', 40px, black)
+      @include fontHeaders('Poppins', 26px, black);
+    }
+    .bottomMenu nav ul li{
+      @include fontHeaders('Raleway', 20px, black);
     }
     .bottomNavLink{
       display: flex;
       justify-content: space-between;
-      a li{
+      a{
         color:black;
+        transition: all 0.4s ease;
       }
     }
     .bottomIconsContainer{
@@ -37,15 +45,22 @@
         width: 100%;
         text-align: left;
       }
+      .bottomContact{
+        margin-top: 10%;
+      }
         .bottomIcons i,
         .bottomContact i {
           margin-right: 2%;
-          font-size: 20px;
+          font-size: 16px;
           color:seashell;
           background: black; 
           padding: 2%; 
           border-radius: 50%;
         }
-
     }  
+  }
+}
+.bottomNavLink a :active,
+.bottomNavLink a :hover{
+color: #1bf1ad;
 }

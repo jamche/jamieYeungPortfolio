@@ -216,7 +216,11 @@ img {
 
 header {
   background-color: grey;
-  height: 60vh;
+  background: url(../assets/headerPicHangar.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 70vh;
 }
 
 .container {
@@ -240,8 +244,8 @@ header {
 
 .container .headerTitle h1 {
   font-family: Poppins;
-  font-size: 90px;
-  color: black;
+  font-size: 60px;
+  color: seashell;
 }
 
 .container .navLink {
@@ -251,14 +255,29 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-family: Raleway;
+  font-size: 20px;
+  color: seashell;
 }
 
 .container .navLink a {
   margin: 3% 5%;
-  color: black;
+  color: seashell;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.navLink a:active,
+.navLink a:hover {
+  color: #1bf1ad;
 }
 
 .aboutContainer {
+  background: url(../assets/backgroundSkills.jpeg);
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat-y;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -273,11 +292,17 @@ header {
 
 .aboutContainer .aboutText
 h2 {
+  font-family: "Poppins";
+  font-size: 26px;
+  color: black;
   margin: 3% 0 2%;
   text-align: center;
 }
 
 .aboutContainer p {
+  font-family: "Raleway";
+  font-size: 20px;
+  color: black;
   text-align: left;
 }
 
@@ -289,18 +314,16 @@ h2 {
      object-fit: cover;
 }
 
-.svgting {
-  color: black;
-}
-
 .skillSquares {
+  background: url(../assets/backgroundSkills.jpeg);
+  background-position: left;
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: repeat-y;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 3% 0;
-  background: url(../assets/backgroungSkills.jpeg);
-  background-position: center;
-  background-attachment: fixed;
+  margin: 5% 0;
 }
 
 .skillSquares .skillSquaresLeft,
@@ -313,10 +336,6 @@ h2 {
 }
 
 .skillSquares .skillSquaresRight {
-  background-image: url(../assets/dots.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center bottom;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,41 +350,36 @@ h2 {
 }
 
 .skillSquares .skillSquaresRight .skillSquaresRightTitle {
-  text-align: left;
+  text-align: center;
   font-size: 50px;
 }
 
 .skillSquares .skillSquaresRight .skillSquaresRightTitle h3 {
   font-family: Poppins;
-  font-size: 60px;
+  font-size: 40px;
   color: black;
 }
 
-.skillSquares .skillSquaresRight .skillSquaresIcons {
+.skillSquares .skillSquaresRight .skillSquaresIcons .skillSquaresIconsBlock {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-.skillSquares .skillSquaresRight .skillSquaresIcons i {
-  font-size: 60px;
-  margin: 1%;
-}
-
-.skillSquares .skillSquaresRight .skillSquaresIcons .skillSquaresIcons {
-  width: 50%;
-}
-
-.skillSquares .skillSquaresRight .skillSquaresIcons .firebaseLogo,
-.skillSquares .skillSquaresRight .skillSquaresIcons .responsiveLogo {
-  display: inline-block;
-  margin: 1%;
-  width: 60px;
-  height: 60px;
+.skillSquares .skillSquaresRight .skillSquaresIcons .skillSquaresIconsBlock i {
+  font-size: 50px;
+  margin: 2%;
 }
 
 .projectsContainer {
+  background: url(../assets/projectsBack.jpeg);
+  background-attachment: fixed;
+  background-repeat: repeat-y;
+  background-size: contain;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -379,12 +393,12 @@ h2 {
 }
 
 .projectsContainer div img {
-  width: initial;
+  width: 100%;
 }
 
 .projectsContainerTitle h3 {
   font-family: Poppins;
-  font-size: 60px;
+  font-size: 40px;
   color: black;
 }
 
@@ -409,6 +423,7 @@ h2 {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+  margin: 0 2%;
   text-align: center;
   font-family: "Raleway";
   font-size: 20px;
@@ -434,6 +449,23 @@ h2 {
   margin: 0 5px;
 }
 
+.projectsContainerList .projects .projectsLinks {
+  width: 100%;
+  margin: 2% 0;
+}
+
+.projectsContainerList .projects .projectsLinks a {
+  border: 1px solid black;
+  padding: 1%;
+  color: black;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.projectsContainerList .projects .projectsLinks a:hover {
+  background: #1bf1ad;
+}
+
 .projectsContainerList .projects p {
   margin: 2%;
   padding: 0 5%;
@@ -454,7 +486,12 @@ h2 {
           flex-direction: column;
 }
 
-.bottomNav {
+footer {
+  margin-top: 2%;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+footer .bottomNav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -467,15 +504,15 @@ h2 {
   color: black;
 }
 
-.bottomNav .bottomNavContainer {
+footer .bottomNav .bottomNavContainer {
   width: 60%;
 }
 
-.bottomNav .bottomIconsContainer {
+footer .bottomNav .bottomIconsContainer {
   width: 30%;
 }
 
-.bottomNav .bottomNavContainer {
+footer .bottomNav .bottomNavContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,15 +522,21 @@ h2 {
           flex-direction: column;
 }
 
-.bottomNav .bottomNavTitle,
-.bottomNav .bottomMenu {
+footer .bottomNav .bottomNavTitle,
+footer .bottomNav .bottomMenu {
   margin: 2% 0;
   font-family: "Poppins";
-  font-size: 40px;
+  font-size: 26px;
   color: black;
 }
 
-.bottomNav .bottomNavLink {
+footer .bottomNav .bottomMenu nav ul li {
+  font-family: "Raleway";
+  font-size: 20px;
+  color: black;
+}
+
+footer .bottomNav .bottomNavLink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -502,11 +545,13 @@ h2 {
           justify-content: space-between;
 }
 
-.bottomNav .bottomNavLink a li {
+footer .bottomNav .bottomNavLink a {
   color: black;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-.bottomNav .bottomIconsContainer {
+footer .bottomNav .bottomIconsContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,18 +568,27 @@ h2 {
           justify-content: space-evenly;
 }
 
-.bottomNav .bottomIconsContainer .bottomIcons,
-.bottomNav .bottomIconsContainer .bottomContact {
+footer .bottomNav .bottomIconsContainer .bottomIcons,
+footer .bottomNav .bottomIconsContainer .bottomContact {
   width: 100%;
   text-align: left;
 }
 
-.bottomNav .bottomIconsContainer .bottomIcons i,
-.bottomNav .bottomIconsContainer .bottomContact i {
+footer .bottomNav .bottomIconsContainer .bottomContact {
+  margin-top: 10%;
+}
+
+footer .bottomNav .bottomIconsContainer .bottomIcons i,
+footer .bottomNav .bottomIconsContainer .bottomContact i {
   margin-right: 2%;
-  font-size: 20px;
+  font-size: 16px;
   color: seashell;
   background: black;
   padding: 2%;
   border-radius: 50%;
+}
+
+.bottomNavLink a :active,
+.bottomNavLink a :hover {
+  color: #1bf1ad;
 }
