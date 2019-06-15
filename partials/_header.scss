@@ -12,6 +12,9 @@ header{
   .headerTitle{
   margin-top: 15%;
   text-align: center;
+      h1{
+      @include fontHeaders(Poppins, 90px, black);
+    }
   }
     .navLink{
       display: flex;

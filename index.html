@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://fonts.googleapis.com/css?family=Poppins:400,700,900|Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
   <link rel="stylesheet" href="styles/style.css">
   <title>Jamie Yeung</title>
   
@@ -47,8 +49,6 @@
     <div class="skillSquares">
       <div class="skillSquaresLeft">
         <div>
-        </div>
-        <div>
           <img src="assets/greenSquare.png" alt="picture of writing on a board">
         </div>
       </div>
@@ -57,18 +57,24 @@
           <h3>Skills</h3>
         </div>
         <div class="skillSquaresIcons">
-          <i class="devicon-html5-plain colored"></i>
-          <i class="devicon-css3-plain colored"></i>
-          <i class="devicon-sass-original colored"></i>
-          <i class="devicon-javascript-plain colored"></i>
-          <i class="devicon-jquery-plain colored"></i>
-          <i class="devicon-react-original colored"></i>
-          <i class="devicon-git-plain colored"></i>
-          <i class="devicon-github-plain colored"></i>
-          <i class="devicon-visualstudio-plain colored"></i>
-          <div class="firebaseLogo">
-            <img src="https://img.icons8.com/color/48/000000/firebase.png">
+          <div class="skillSquaresIconsBlock">
+            <i class="devicon-html5-plain colored"></i>
+            <i class="devicon-css3-plain colored"></i>
+            <i class="devicon-sass-original colored"></i>
+            <i class="devicon-javascript-plain colored"></i>
+            <i class="devicon-jquery-plain colored"></i>
+            <i class="devicon-react-original colored"></i>
           </div>
+          <div class="skillSquaresIconsBlock">
+            <i class="devicon-git-plain colored"></i>
+            <i class="devicon-github-plain colored"></i>
+            <i class="devicon-visualstudio-plain colored"></i>
+            <i class="fas fa-terminal"></i>
+            <img class="firebaseLogo" src="https://img.icons8.com/color/48/000000/firebase.png" alt="firebaselog">
+            <img class="responsiveLogo" src="assets/responsive-design.png" alt="">
+          </div>
+         </div> 
+      </div>
     </div>
   </section>
 <!-- projects -->
@@ -78,31 +84,64 @@
         <h3>Projects</h3>
       </div>
       <div class="projectsContainerList">
-        <div class="project">
-          <!-- tech challenge to get in, psd -->
-          <a href="#"> <img src="https://via.placeholder.com/150" alt=""></a>
-        </div>
-        <div class="project">
+          <div class="projects">
+            <div class="projectsIcon">
+              <i class="devicon-html5-plain colored"></i>
+              <i class="devicon-css3-plain colored"></i>
+              <i class="devicon-sass-original colored"></i>
+            </div>
+            <p>First responsive PSD project completed using only floats.</p>
+            <a href="#"> <img src="assets/carProject.png" alt=""></a>
+          </div>
           <!-- psd of intro back -->
-         <a href="#"> <img src="https://via.placeholder.com/150" alt=""></a>
-        </div>
-        <div class="project">
-          <!-- project 3(quiz) or psd or group jquery -->
-         <a href="#"> <img src="https://via.placeholder.com/150" alt=""></a>
-        </div>
-        <div class="project">
-          <!-- react project -->
-         <a href="#"> <img src="https://via.placeholder.com/150" alt=""></a>
-        </div>
-        <div class="project">
+          <div class="projects">
+            <div class="projectsIcon">
+              <i class="devicon-html5-plain colored"></i>
+              <i class="devicon-css3-plain colored"></i>
+              <i class="devicon-sass-original colored"></i>
+            </div>
+            <p>First multi page responsive PSD project using flexbox and making our own decision on the mobile design.</p>
+            <a href="#"> <img src="assets/mindSoul.png" alt=""></a>
+          </div>
           <!-- group jquery or group react -->
-         <a href="#"> <img src="https://via.placeholder.com/150" alt=""></a>
-        </div>
+          <div class="projects">
+            <div class="projectsIcon">
+              <i class="devicon-html5-plain colored"></i>
+              <i class="devicon-css3-plain colored"></i>
+              <i class="devicon-sass-original colored"></i>
+              <i class="devicon-jquery-plain colored"></i>
+            </div>
+            <p>A paired jQuery project using The MovieDB API  which recommends a movie or tv show to watch based on the genre and mood the user selects. Created with Tommy Lay</p>
+           <a href="#"> <img src="assets/movieProjectL.jpg" alt=""></a>
+          </div>
+          <!-- react project -->
+          <div class="projects">
+            <div class="projectsIcon">
+              <i class="devicon-html5-plain colored"></i>
+              <i class="devicon-css3-plain colored"></i>
+              <i class="devicon-react-original colored"></i>
+            </div>
+            <p>First React project using the NY Times Books API to provide the user with a book recommendation from the NY Times best sellers of the week.</p>
+            <a href="#"> <img src="assets/randomBook.png" alt=""></a>
+          </div>
+          <!-- group jquery or group react -->
+          <div class="projects">
+            <div class="projectsIcon">
+              <i class="devicon-html5-plain colored"></i>
+              <i class="devicon-css3-plain colored"></i>
+              <i class="devicon-sass-original colored"></i>
+              <i class="devicon-react-original colored"></i>
+              <i class="devicon-git-plain colored"></i>
+              <i class="devicon-github-plain colored"></i>
+            </div>
+            <p>A collaborative project using React & the Ticketmaster API. The app provides users the option to go to seperate events at a similar time and location, because sometimes you might just need a break from your partner! Created with Can Rozanes, Annie Liew & Irene Truong</p>
+            <a href="#"> <img src="assets/personalDate.png" alt=""></a>
+          </div>
       </div>
     </div>
   </section>
 <!-- contact -->
-  <section>
+  <!-- <section>
     <div class="contactMeForm">
       <h1>Contact Me!</h1>
       <form class="wrapper">
@@ -117,23 +156,37 @@
         <button>Submit your message</button>
       </form>
     </div>
-  </section>
+  </section> -->
 
   <!-- bottom Nav -->
+ 
+</main>
+
+<footer>
   <section>
     <div class="bottomNav wrapper">
       <div class="bottomNavContainer">
-        <div>
+        <div class="bottomNavTitle">
           <h2>By Jamie Yeung</h2>
         </div>
         <div class="bottomMenu">
           <nav>
             <ul class="bottomNavLink">
-              <a href="#"><li>Home</li></a>
-              <a href="#"><li>About</li></a>
-              <a href="#"><li>Skills</li></a>
-              <a href="#"><li>Projects</li></a>
-              <a href="#"><li>Contact</li></a>
+              <a href="#">
+                <li>Home</li>
+              </a>
+              <a href="#">
+                <li>About</li>
+              </a>
+              <a href="#">
+                <li>Skills</li>
+              </a>
+              <a href="#">
+                <li>Projects</li>
+              </a>
+              <a href="#">
+                <li>Contact</li>
+              </a>
             </ul>
           </nav>
         </div>
@@ -141,26 +194,22 @@
       <div class="bottomIconsContainer">
         <div class="bottomIcons">
           <!-- github -->
+          <a href=""><i class="devicon-github-plain colored"></i></a>
           <!-- Twitter -->
+          <a href=""><i class="devicon-twitter-plain"></i></a>
           <!-- linkedin -->
+          <a href=""><i class="fab fa-linkedin-in"></i></a>
         </div>
         <div class="bottomContact">
-          <p>Call at 905-995-0117</p>
-          <p>email at jamieyyw@gmail.com</p>
+          <p><i class="fas fa-envelope"></i>email: jamieyyw@gmail.com</p>  
         </div>
       </div>
-
     </div>
-
-
   </section>
-</main>
-
-<footer>
-
 </footer>
 
-<script src="script.js"></script>
 <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

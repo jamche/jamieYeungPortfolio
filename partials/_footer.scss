@@ -1,3 +1,51 @@
-footer{
-  text-align: center;
+.bottomNav{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3%;
+  @include fontHeaders('Raleway', 20px,black);
+
+  .bottomNavContainer{
+    width: 60%;
+  }
+  .bottomIconsContainer{
+    width: 30%;
+  }
+  .bottomNavContainer{
+    display: flex;
+    flex-direction: column;
+  }
+    .bottomNavTitle,
+    .bottomMenu{
+      margin: 2% 0;
+      @include fontHeaders('Poppins', 40px, black)
+    }
+    .bottomNavLink{
+      display: flex;
+      justify-content: space-between;
+      a li{
+        color:black;
+      }
+    }
+    .bottomIconsContainer{
+      display:flex;
+      align-items: flex-end;
+      flex-direction: column;
+      text-align: right;
+      justify-content: space-evenly;
+      .bottomIcons,
+      .bottomContact{
+        width: 100%;
+        text-align: left;
+      }
+        .bottomIcons i,
+        .bottomContact i {
+          margin-right: 2%;
+          font-size: 20px;
+          color:seashell;
+          background: black; 
+          padding: 2%; 
+          border-radius: 50%;
+        }
+
+    }  
 }

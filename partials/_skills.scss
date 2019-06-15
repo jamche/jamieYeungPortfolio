@@ -5,35 +5,52 @@
 .skillSquares{
   display: flex;
   margin: 3% 0;
+  background: url(../assets/backgroungSkills.jpeg);
+  background-position: center;
+  background-attachment: fixed;
   .skillSquaresLeft,
   .skillSquaresRight{
     width: 45%;
   }
+  .skillSquaresLeft{
+    margin-right: 2.5%;
+  }
   .skillSquaresRight{
-    background-image: url(/assets/plus.svg);
-    background-size:200px 200px;
+    background-image: url(../assets/dots.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:center bottom;
     display: flex;
     flex-direction: column;
-    margin-left:0;
+    margin-left:2.5%;
     justify-content: center;
     .skillSquaresRightTitle{
       text-align: left;
       font-size: 50px;
     }
+    .skillSquaresRightTitle{
+      h3{
+        @include fontHeaders(Poppins, 60px, black);
+      }
+    }
     .skillSquaresIcons{
       display: flex;
       width: 100%;
-      flex-wrap: wrap;
       i{
         font-size: 60px;
         margin: 1%;
       }
-      .firebaseLogo{
+      .skillSquaresIcons{
+        width: 50%;
+      }  
+      // change firebase and responsive design
+      .firebaseLogo,
+      .responsiveLogo{
+        display: inline-block;
         margin: 1%;
-        img{
-          height: 100%;
+        width: 60px;
+        height: 60px;
         }
       }
     }
-  }
 }
