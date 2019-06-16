@@ -179,6 +179,11 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   overflow: hidden;
 }
 
+html {
+  font-size: 125%;
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #F5F5F5;
   background-image: url(../assets/page-bg.jpeg);
@@ -206,7 +211,6 @@ a {
 
 p, a, li {
   line-height: 1.5;
-  font-size: 20px;
 }
 
 img {
@@ -216,7 +220,7 @@ img {
 
 header {
   background-color: grey;
-  background: url(../assets/headerPicHangar.jpg);
+  background: url(../assets/headerPic.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -239,12 +243,12 @@ header {
 
 .container .headerTitle {
   margin-top: 15%;
-  text-align: center;
+  text-align: left;
 }
 
 .container .headerTitle h1 {
   font-family: Poppins;
-  font-size: 60px;
+  font-size: 2rem;
   color: seashell;
 }
 
@@ -256,7 +260,7 @@ header {
 @media (max-width: 800px) {
   .container .hamburger {
     display: block;
-    font-size: 25px;
+    font-size: 1.5rem;
     position: relative;
     top: 0;
     left: 30px;
@@ -270,7 +274,7 @@ header {
 @media (max-width: 800px) {
   .container .exitMenu {
     display: block;
-    font-size: 25px;
+    font-size: 1.5rem;
     position: absolute;
     top: 30px;
     right: 30px;
@@ -306,8 +310,10 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-family: Raleway;
-  font-size: 20px;
+  border-radius: 5px;
+  width: 100%;
+  font-family: "Raleway";
+  font-size: 1rem;
   color: seashell;
 }
 
@@ -331,9 +337,16 @@ header {
   transition: all 0.4s ease;
 }
 
-.navLink li a:active,
-.navLink li a:hover {
+@media (max-width: 835px) {
+  .container nav .navLink a {
+    margin: 3%;
+  }
+}
+
+.container nav .navLink a:active,
+.container nav .navLink a:hover {
   color: #1bf1ad;
+  border-radius: 5px;
 }
 
 .aboutContainer {
@@ -348,25 +361,78 @@ header {
   margin-top: 2%;
 }
 
+@media (max-width: 835px) {
+  .aboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.aboutContainer .aboutPicture,
 .aboutContainer .aboutText {
   width: 100%;
   margin: 2%;
 }
 
+@media (max-width: 835px) {
+  .aboutContainer .aboutPicture,
+  .aboutContainer .aboutText {
+    margin: 0;
+  }
+}
+
 .aboutContainer .aboutText
 h2 {
   font-family: "Poppins";
-  font-size: 26px;
+  font-size: 1.5rem;
   color: black;
+  font-weight: 700;
   margin: 3% 0 2%;
   text-align: center;
 }
 
 .aboutContainer p {
   font-family: "Raleway";
-  font-size: 20px;
+  font-size: 0.8rem;
   color: black;
-  text-align: left;
+  text-align: justify;
+}
+
+@media (max-width: 835px) {
+  .aboutContainer p {
+    padding: 1% 5%;
+  }
+}
+
+@media (max-width: 762px) {
+  .aboutContainer .aboutPicture {
+    margin: 2% auto;
+  }
+}
+
+.aboutContainer .aboutPicture img {
+  border-radius: 50% 50%;
+  width: 400px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media (max-width: 835px) {
+  .aboutContainer .aboutPicture img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 370px) {
+  .aboutContainer .aboutPicture img {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .skillSquares {
@@ -381,9 +447,26 @@ h2 {
   margin: 5% 0;
 }
 
+@media (max-width: 500px) {
+  .skillSquares {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
 .skillSquares .skillSquaresLeft,
 .skillSquares .skillSquaresRight {
   width: 45%;
+}
+
+@media (max-width: 500px) {
+  .skillSquares .skillSquaresLeft,
+  .skillSquares .skillSquaresRight {
+    width: 100%;
+    margin: 2% 0;
+  }
 }
 
 .skillSquares .skillSquaresLeft {
@@ -408,15 +491,31 @@ h2 {
           justify-content: center;
 }
 
+@media (max-width: 835px) {
+  .skillSquares .skillSquaresRight {
+    margin: 0;
+    width: 50%;
+    background: none;
+  }
+}
+
+@media (max-width: 835px) and (max-width: 500px) {
+  .skillSquares .skillSquaresRight {
+    width: 100%;
+  }
+}
+
 .skillSquares .skillSquaresRight .skillSquaresRightTitle {
   text-align: center;
   font-size: 50px;
 }
 
-.skillSquares .skillSquaresRight .skillSquaresRightTitle h3 {
+.skillSquares .skillSquaresRight .skillSquaresRightTitle h2 {
   font-family: Poppins;
-  font-size: 40px;
+  font-size: 1.5rem;
   color: black;
+  font-weight: 700;
+  margin: 4% 0;
 }
 
 .skillSquares .skillSquaresRight .skillSquaresIcons .skillSquaresIconsBlock {
@@ -451,14 +550,16 @@ h2 {
           align-items: center;
 }
 
-.projectsContainer div img {
+.projectsContainer img {
   width: 100%;
 }
 
-.projectsContainerTitle h3 {
+.projectsContainerTitle h2 {
   font-family: Poppins;
-  font-size: 40px;
+  font-size: 1.5rem;
   color: black;
+  font-weight: 700;
+  margin: 3% 0 2%;
 }
 
 .projectsContainerList {
@@ -485,7 +586,7 @@ h2 {
   margin: 0 2%;
   text-align: center;
   font-family: "Raleway";
-  font-size: 20px;
+  font-size: 0.8rem;
   color: black;
 }
 
@@ -498,36 +599,91 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-size: 30px;
+  font-size: 1rem;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
 .projectsContainerList .projects .projectsIcon i {
+  font-size: 1.5rem;
   margin: 0 5px;
 }
 
-.projectsContainerList .projects .projectsLinks {
-  width: 100%;
-  margin: 2% 0;
+@media (max-width: 320px) {
+  .projectsContainerList .projects .projectsIcon i {
+    display: none;
+  }
 }
 
-.projectsContainerList .projects .projectsLinks a {
+.projectsContainerList .projects .projectsIcon p {
+  font-size: .8rem;
+}
+
+.projectsContainerList .projects .projectLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1% 2%;
+  padding: 0 2%;
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.projectsContainerList .projects .projectLinks a {
+  font-size: 20px;
   border: 1px solid black;
-  padding: 1%;
+  margin: 0 5%;
+  padding: 2%;
   color: black;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.projectsContainerList .projects .projectsLinks a:hover {
+.projectsContainerList .projects a:hover {
   background: #1bf1ad;
 }
 
 .projectsContainerList .projects p {
   margin: 2%;
   padding: 0 5%;
+}
+
+@media (max-width: 755px) {
+  .galleryCell {
+    top: 10%;
+  }
+}
+
+@media (max-width: 550px) {
+  .galleryCell {
+    top: 0;
+  }
+}
+
+.flickity-prev-next-button {
+  top: 60%;
+}
+
+@media (max-width: 400px) {
+  .flickity-prev-next-button {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+@media (max-width: 592px) {
+  .flickity-prev-next-button.previous {
+    left: -5%;
+  }
+}
+
+@media (max-width: 592px) {
+  .flickity-prev-next-button.next {
+    right: -5%;
+  }
 }
 
 .contactMeForm {
@@ -550,6 +706,12 @@ footer {
   border-top: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+@media (max-width: 550px) {
+  footer {
+    margin-top: 8%;
+  }
+}
+
 footer .bottomNav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -559,12 +721,42 @@ footer .bottomNav {
           justify-content: space-between;
   margin-top: 3%;
   font-family: "Raleway";
-  font-size: 20px;
+  font-size: 1rem;
   color: black;
 }
 
+@media (max-width: 835px) {
+  footer .bottomNav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+
 footer .bottomNav .bottomNavContainer {
-  width: 60%;
+  width: 50%;
+}
+
+@media (max-width: 835px) {
+  footer .bottomNav .bottomNavContainer {
+    width: 100%;
+    margin-bottom: 2%;
+  }
+}
+
+footer .bottomNav .bottomIconsContainer {
+  width: 40%;
+}
+
+@media (max-width: 835px) {
+  footer .bottomNav .bottomIconsContainer {
+    width: 100%;
+  }
+}
+
+footer .bottomNav .bottomNavContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -574,49 +766,20 @@ footer .bottomNav .bottomNavContainer {
           flex-direction: column;
 }
 
-footer .bottomNav .bottomIconsContainer {
-  width: 30%;
-}
-
-footer .bottomNav .bottomPictureContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-footer .bottomNav img {
-  border-radius: 50% 50%;
-  width: 200px;
-  height: 200px;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-footer .bottomNav .bottomContact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10%;
-  margin-left: 5%;
+footer .bottomNav .bottomNavTitle {
+  font-family: "Poppins";
+  font-size: 0.85rem;
+  color: black;
 }
 
 footer .bottomNav .bottomMenu {
   margin: 2% 0;
   font-family: "Poppins";
-  font-size: 26px;
+  font-size: 0.85rem;
   color: black;
 }
 
-footer .bottomNav .bottomMenu nav ul li {
-  font-family: "Raleway";
-  font-size: 20px;
-  color: black;
-}
-
-footer .bottomNav .bottomNavLink {
+footer .bottomNav .bottomMenu .bottomNavLink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -625,10 +788,24 @@ footer .bottomNav .bottomNavLink {
           justify-content: space-between;
 }
 
-footer .bottomNav .bottomNavLink a {
+@media (max-width: 780px) {
+  footer .bottomNav .bottomMenu .bottomNavLink {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+footer .bottomNav .bottomMenu .bottomNavLink a {
   color: black;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+
+footer .bottomNav .bottomMenu .bottomNavLink a:active,
+footer .bottomNav .bottomMenu .bottomNavLink a:hover {
+  color: #1bf1ad;
 }
 
 footer .bottomNav .bottomIconsContainer {
@@ -648,22 +825,48 @@ footer .bottomNav .bottomIconsContainer {
           justify-content: space-evenly;
 }
 
-footer .bottomNav .bottomIconsContainer .bottomIcons {
+footer .bottomNav .bottomIconsContainer .bottomIcons,
+footer .bottomNav .bottomIconsContainer .bottomContact {
   width: 100%;
   text-align: left;
+}
+
+@media (max-width: 835px) {
+  footer .bottomNav .bottomIconsContainer .bottomIcons,
+  footer .bottomNav .bottomIconsContainer .bottomContact {
+    text-align: center;
+  }
+}
+
+footer .bottomNav .bottomIconsContainer .bottomIcons p,
+footer .bottomNav .bottomIconsContainer .bottomContact p {
+  padding: 1% 0;
+  font-size: .85rem;
+}
+
+@media (max-width: 835px) {
+  footer .bottomNav .bottomIconsContainer .bottomIcons p,
+  footer .bottomNav .bottomIconsContainer .bottomContact p {
+    font-size: .85rem;
+  }
 }
 
 footer .bottomNav .bottomIconsContainer .bottomIcons i,
 footer .bottomNav .bottomIconsContainer .bottomContact i {
   margin-right: 2%;
-  font-size: 16px;
+  font-size: 1rem;
   color: seashell;
   background: black;
   padding: 2%;
   border-radius: 50%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  display: inline-block;
 }
 
-.bottomNavLink a :active,
-.bottomNavLink a :hover {
+footer .bottomNav .bottomIconsContainer .bottomIcons i:hover,
+footer .bottomNav .bottomIconsContainer .bottomIcons i:active,
+footer .bottomNav .bottomIconsContainer .bottomContact i:hover,
+footer .bottomNav .bottomIconsContainer .bottomContact i:active {
   color: #1bf1ad;
 }

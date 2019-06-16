@@ -6,9 +6,16 @@
   background-repeat: repeat-y;
   display: flex;
   margin: 5% 0;
+  @include media(500px){
+    flex-direction: column-reverse;
+  }
   .skillSquaresLeft,
   .skillSquaresRight{
     width: 45%;
+    @include media(500px){
+      width: 100%;
+      margin: 2% 0;
+    }
   }
   .skillSquaresLeft{
     margin-right: 2.5%;
@@ -22,17 +29,26 @@
     flex-direction: column;
     margin-left:2.5%;
     justify-content: center;
+    @include media (835px){
+      margin: 0;
+      width: 50%;
+      background: none;
+      @include media (500px){
+        width: 100%;
+      }
+    }
     .skillSquaresRightTitle{
       text-align: center;
       font-size: 50px;
     }
     .skillSquaresRightTitle{
-      h3{
-        @include fontHeaders(Poppins, 40px, black);
+      h2{
+        @include fontHeaders(Poppins, 1.5rem, black);
+        font-weight: 700;
+        margin: 4% 0;
       }
     }
     .skillSquaresIcons{
-
       .skillSquaresIconsBlock{ 
         width: 100%;
         display: flex;

@@ -1,6 +1,6 @@
 header{
   background-color: grey;
-  background: url(../assets/headerPicHangar.jpg);
+  background: url(../assets/headerPic.jpg);
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat; 
@@ -15,9 +15,9 @@ header{
 
   .headerTitle{
   margin-top: 15%;
-  text-align: center;
+  text-align: left;
       h1{
-      @include fontHeaders(Poppins, 60px, seashell);
+      @include fontHeaders(Poppins, 2rem, seashell);
     }
   }
     .hamburger,
@@ -27,7 +27,7 @@ header{
       .hamburger{
         @include media(800px) {
 				display: block;
-        font-size: 25px;
+        font-size: 1.5rem;
         position: relative;
         top: 0;
         left: 30px;
@@ -40,7 +40,7 @@ header{
       .exitMenu{
         @include media(800px){
           display: block;
-          font-size: 25px;
+          font-size: 1.5rem;
           position: absolute;
           top: 30px;
           right: 30px;
@@ -67,7 +67,10 @@ header{
     .navLink{
       display: flex;
       justify-content: center;
-      @include fontHeaders (Raleway, 20px, seashell);
+      // background: rgba(0,0,0,.8);
+      border-radius: 5px;
+      width: 100%;
+      @include fontHeaders ('Raleway', 1rem, seashell);
       @include media(800px){
         display: flex;
         flex-direction: column;
@@ -77,12 +80,18 @@ header{
         margin: 3% 5%;
         color:seashell;
         transition: all 0.4s ease;
+        @include media (835px){
+          margin: 3%;
+        }
+      }
+       a:active,
+       a:hover{
+        color: #1bf1ad;
+        // background: rgba(0,0,0,.5);
+        border-radius: 5px;
       }
     }
   } 
 }
 
-.navLink li a:active,
-.navLink li a:hover{
-  color: #1bf1ad;
-}
+
