@@ -5,6 +5,9 @@
   font-size:($size);
   color:($color);
 }
-@mixin buttonStyle {
-  
+// for media query
+@mixin media($width) {
+  @media (max-width: $width) {
+    @content;
+  }  
 }

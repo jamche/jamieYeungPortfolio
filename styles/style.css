@@ -248,7 +248,58 @@ header {
   color: seashell;
 }
 
-.container .navLink {
+.container .hamburger,
+.container .exitMenu {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  .container .hamburger {
+    display: block;
+    font-size: 25px;
+    position: relative;
+    top: 0;
+    left: 30px;
+    color: black;
+    position: absolute;
+    top: 20px;
+    z-index: 100;
+  }
+}
+
+@media (max-width: 800px) {
+  .container .exitMenu {
+    display: block;
+    font-size: 25px;
+    position: absolute;
+    top: 30px;
+    right: 30px;
+  }
+}
+
+.container .show.menu {
+  display: block;
+}
+
+@media (max-width: 800px) {
+  .container .menu {
+    display: none;
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+  }
+}
+
+@media (max-width: 800px) {
+  .container nav {
+    height: 72vh;
+  }
+}
+
+.container nav .navLink {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -260,15 +311,28 @@ header {
   color: seashell;
 }
 
-.container .navLink a {
+@media (max-width: 800px) {
+  .container nav .navLink {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+}
+
+.container nav .navLink a {
   margin: 3% 5%;
   color: seashell;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
-.navLink a:active,
-.navLink a:hover {
+.navLink li a:active,
+.navLink li a:hover {
   color: #1bf1ad;
 }
 
@@ -284,9 +348,8 @@ header {
   margin-top: 2%;
 }
 
-.aboutContainer .aboutPicture,
 .aboutContainer .aboutText {
-  width: calc(100% - 2%);
+  width: 100%;
   margin: 2%;
 }
 
@@ -304,14 +367,6 @@ h2 {
   font-size: 20px;
   color: black;
   text-align: left;
-}
-
-.aboutContainer .aboutPicture img {
-  border-radius: 50% 50%;
-  width: 400px;
-  height: 400px;
-  -o-object-fit: cover;
-     object-fit: cover;
 }
 
 .skillSquares {
@@ -336,6 +391,10 @@ h2 {
 }
 
 .skillSquares .skillSquaresRight {
+  background-image: url(../assets/dots.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -506,13 +565,6 @@ footer .bottomNav {
 
 footer .bottomNav .bottomNavContainer {
   width: 60%;
-}
-
-footer .bottomNav .bottomIconsContainer {
-  width: 30%;
-}
-
-footer .bottomNav .bottomNavContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -522,7 +574,35 @@ footer .bottomNav .bottomNavContainer {
           flex-direction: column;
 }
 
-footer .bottomNav .bottomNavTitle,
+footer .bottomNav .bottomIconsContainer {
+  width: 30%;
+}
+
+footer .bottomNav .bottomPictureContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .bottomNav img {
+  border-radius: 50% 50%;
+  width: 200px;
+  height: 200px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+footer .bottomNav .bottomContact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10%;
+  margin-left: 5%;
+}
+
 footer .bottomNav .bottomMenu {
   margin: 2% 0;
   font-family: "Poppins";
@@ -568,14 +648,9 @@ footer .bottomNav .bottomIconsContainer {
           justify-content: space-evenly;
 }
 
-footer .bottomNav .bottomIconsContainer .bottomIcons,
-footer .bottomNav .bottomIconsContainer .bottomContact {
+footer .bottomNav .bottomIconsContainer .bottomIcons {
   width: 100%;
   text-align: left;
-}
-
-footer .bottomNav .bottomIconsContainer .bottomContact {
-  margin-top: 10%;
 }
 
 footer .bottomNav .bottomIconsContainer .bottomIcons i,

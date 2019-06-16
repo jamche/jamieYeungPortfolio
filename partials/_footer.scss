@@ -10,15 +10,27 @@ footer{
 
   .bottomNavContainer{
     width: 60%;
+    display: flex;
+    flex-direction: column;
   }
   .bottomIconsContainer{
     width: 30%;
   }
-  .bottomNavContainer{
+  .bottomPictureContainer{
     display: flex;
-    flex-direction: column;
+    align-items: center;  
   }
-    .bottomNavTitle,
+    img{
+      border-radius: 50% 50%;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
+    .bottomContact{
+      display: flex;
+      margin-top: 10%;
+      margin-left: 5%
+    }
     .bottomMenu{
       margin: 2% 0;
       @include fontHeaders('Poppins', 26px, black);
@@ -40,13 +52,9 @@ footer{
       flex-direction: column;
       text-align: right;
       justify-content: space-evenly;
-      .bottomIcons,
-      .bottomContact{
+      .bottomIcons{
         width: 100%;
         text-align: left;
-      }
-      .bottomContact{
-        margin-top: 10%;
       }
         .bottomIcons i,
         .bottomContact i {

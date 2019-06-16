@@ -7,4 +7,10 @@ $(function () {
   imagesLoaded: true,
   contain: true
   });
+  $('.hamburger').click(function () {
+      $('.menu').toggleClass('show');
+    });
+    $('.exitMenu').click(function () {
+      $('.menu').toggleClass('show');
+    });
 });
