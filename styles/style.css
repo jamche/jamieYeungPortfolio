@@ -311,13 +311,13 @@ header {
     top: -15px;
     left: 0;
     right: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: black;
   }
 }
 
 @media (max-width: 800px) {
   .container nav {
-    height: 100vh;
+    height: 102vh;
   }
 }
 
@@ -451,7 +451,7 @@ h2 {
   font-family: "Raleway";
   font-size: 1rem;
   color: black;
-  text-align: justify;
+  text-align: left;
 }
 
 @media (max-width: 835px) {
@@ -668,7 +668,7 @@ h2 {
   font-size: 1.5rem;
   color: black;
   font-weight: 700;
-  margin: 3% 0 2%;
+  margin: 2% 0;
 }
 
 .projectsContainerList {
@@ -712,6 +712,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 2% 0;
 }
 
 .projectsContainerList .projects .projectsIcon i {
@@ -753,9 +754,10 @@ h2 {
 }
 
 .projectsContainerList .projects p {
-  margin: 2%;
+  margin: 1%;
   padding: 0 5%;
-  font-size: 1rem;
+  font-size: .8rem;
+  text-align: left;
 }
 
 @media (max-width: 755px) {

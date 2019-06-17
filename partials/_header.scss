@@ -63,12 +63,12 @@ header{
 				top: -15px;
 				left: 0;
 				right: 0;
-				background: rgba(0,0,0,0.8);
+				background: rgba(0,0,0,1);
       }
     }
     nav{
     @include media(800px){
-      height: 100vh;
+      height: 102vh;
     }
     .navLink{
       display: flex;
