@@ -21,10 +21,10 @@
     margin-right: 2.5%;
   }
   .skillSquaresRight{
-    background-image: url(../assets/dots.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position:center 60%;
+    // background-image: url(../assets/dots.svg);
+    // background-size: contain;
+    // background-repeat: no-repeat;
+    // background-position:center 60%;
     display: flex;
     flex-direction: column;
     margin-left:2.5%;
@@ -94,7 +94,7 @@
       padding-top: 15px;
       border-radius: 10px;
       font-weight: 700;
-      @include fontHeaders ('Poppins',.8rem,black);
+      @include fontHeaders ('Poppins',.7rem,black);
     }
     .back {
       z-index: 2; /* back side, placed above front */

@@ -5,6 +5,9 @@ header{
   background-repeat:no-repeat; 
   height:100vh;
   opacity: .8;
+  @include media(340px){
+    background-position-x: -400px;
+  }
 }
 
 .container{
@@ -73,8 +76,9 @@ header{
     .navLink{
       display: flex;
       justify-content: center;
-      // background: rgba(0,0,0,.8);
-      border-radius: 5px;
+      background: rgba(0,0,0,.7);
+      margin-bottom: 5%;
+      border-radius: 10px;
       width: 100%;
       @include fontHeaders ('Raleway', 1rem, seashell);
       @include media(800px){

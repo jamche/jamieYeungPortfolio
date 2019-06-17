@@ -6,7 +6,7 @@
   background-repeat: repeat-y;
   display: flex;
   margin-top: 2%;
-  @include media(835px){
+  @include media(1100px){
     flex-direction: column-reverse;
   }
   .aboutPicture,

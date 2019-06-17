@@ -234,6 +234,12 @@ header {
   opacity: .8;
 }
 
+@media (max-width: 340px) {
+  header {
+    background-position-x: -400px;
+  }
+}
+
 .container {
   height: 100%;
   display: -webkit-box;
@@ -328,7 +334,9 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.7);
+  margin-bottom: 5%;
+  border-radius: 10px;
   width: 100%;
   font-family: "Raleway";
   font-size: 1rem;
@@ -415,7 +423,7 @@ header {
   margin-top: 2%;
 }
 
-@media (max-width: 835px) {
+@media (max-width: 1100px) {
   .aboutContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -528,10 +536,6 @@ h2 {
 }
 
 .skillSquares .skillSquaresRight {
-  background-image: url(../assets/dots.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center 60%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -631,7 +635,7 @@ h2 {
   border-radius: 10px;
   font-weight: 700;
   font-family: "Poppins";
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   color: black;
 }
 
@@ -712,7 +716,7 @@ h2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 2% 0;
+  margin: 1% 0;
 }
 
 .projectsContainerList .projects .projectsIcon i {
@@ -739,7 +743,7 @@ h2 {
 }
 
 .projectsContainerList .projects .projectLinks a {
-  font-size: 20px;
+  font-size: .9rem;
   border: 1px solid black;
   border-radius: 10px;
   margin: 0 5%;
@@ -756,8 +760,14 @@ h2 {
 .projectsContainerList .projects p {
   margin: 1%;
   padding: 0 5%;
-  font-size: .8rem;
+  font-size: 1rem;
   text-align: left;
+}
+
+@media (max-width: 400px) {
+  .projectsContainerList .projects p {
+    font-size: .7rem;
+  }
 }
 
 @media (max-width: 755px) {
