@@ -40,6 +40,9 @@
       width: 400px;
       height: 400px;
       object-fit: cover;
+      @include media (1100px){
+        margin: 0 auto;
+      }
     @include media(835px){
         width: 300px;
         height: 300px;
