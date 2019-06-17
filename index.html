@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="styles/style.css">
+
   <title>Jamie Yeung</title>
   
 </head>
@@ -19,7 +21,7 @@
       <h1>Jamie Yeung</h1>
     </div>
     <p class="hamburger"><i class="fas fa-bars"></i></p>
-    <div class="menu">
+    <div class="menu slide-in-left">
       <nav>
         <ul class="navLink">
           <li class="exitMenu"><i class="fas fa-times"></i></li>
@@ -36,12 +38,14 @@
 
 <main>
   <!-- about section -->
-  <section id="about">
+  <section id="about" >
     <div class="aboutContainer wrapper">
-    <div class="aboutPicture">
+    <div class="aboutPicture" data-aos="fade-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
       <img src="assets/2019-Spring-Jamie-Yeung-Yam-Wah-2.jpg" alt="photo of Jamie Yeung">
     </div>
-    <div class="aboutText">
+    <div class="aboutText" data-aos="fade-left" data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
       <h2>About Me</h2>
       <p>Hi there! My name is Jamie and I recently graduated from HackerYou's Web Development Immersive Bootcamp Program. I have a passion for coding and continuously learning about new programming concepts. When I'm not coding you can find me either travelling, doing some kind of physical activity or following the Financial Markets due to my previous work in the Financial Industry. </p>
     </div>
@@ -49,30 +53,95 @@
 <!-- skills  -->
   <section id="skills">
     <div class="skillSquares">
-      <div class="skillSquaresLeft">
+      <div class="skillSquaresLeft" data-aos="fade-down-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
         <div>
           <img src="assets/greenSquare.png" alt="picture of writing on a board">
         </div>
       </div>
-      <div class="skillSquaresRight wrapper">
+      <div class="skillSquaresRight wrapper" data-aos="fade-down-left" data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
         <div class="skillSquaresRightTitle">
           <h2>Skills</h2>
         </div>
         <div class="skillSquaresIcons">
           <div class="skillSquaresIconsBlock">
-            <i class="devicon-html5-plain colored"></i>
-            <i class="devicon-css3-plain colored"></i>
-            <i class="devicon-sass-original colored"></i>
+            <div class="block">
+              <div class="back">
+                <i class="devicon-html5-plain colored"></i>
+              </div>
+              <div class="front">
+                <p>Html5</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="back">
+                <i class="devicon-css3-plain colored"></i>
+              </div>
+              <div class="front">
+                <p>Css3</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="back">
+                <i class="devicon-sass-original colored"></i>
+              </div>
+              <div class="front">
+                <p>Sass</p>
+              </div>
+            </div>
           </div>
           <div class="skillSquaresIconsBlock">  
-            <i class="devicon-javascript-plain colored"></i>
-            <i class="devicon-jquery-plain colored"></i>
-            <i class="devicon-react-original colored"></i>
+            <div class="block">
+              <div class="back">
+                <i class="devicon-javascript-plain colored"></i>
+              </div>
+              <div class="front">
+                <p>JS</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="back">
+                <i class="devicon-jquery-plain colored"></i>
+              </div>
+              <div class="front">
+                <p>jQuery</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="back">
+                <i class="devicon-react-plain colored"></i>
+              </div>
+              <div class="front">
+                <p>React</p>
+              </div>
+            </div>
           </div>
           <div class="skillSquaresIconsBlock">
-            <i class="devicon-git-plain colored"></i>
-            <i class="devicon-github-plain colored"></i>
-            <i class="devicon-visualstudio-plain colored"></i>
+            <div class="block">
+              <div class="back">
+                <i class="devicon-git-plain colored"></i>
+              </div>
+              <div class="front">
+                <p>Git</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="back">
+                <i class="devicon-github-plain colored"></i>
+              </div>
+              <div class="front">
+                <p>Github</p>
+              </div>
+            </div>
+            <div class="block">
+              <div class="back">
+                <i class="devicon-visualstudio-plain colored"></i>
+              </div>
+              <div class="front">
+                <p>VsCode</p>
+              </div>
+            </div>
           </div>
           <!-- <div class="skillSquaresIconBlock">
             <i class="fas fa-terminal"></i>
@@ -86,19 +155,19 @@
   </section>
 <!-- projects -->
   <section id="myWork">
-    <div class="projectsContainer wrapper">
-      <div class="projectsContainerTitle">
+    <div class="projectsContainer wrapper" >
+      <div class="projectsContainerTitle" data-aos="zoom-in-up" data-aos-duration="1000">
         <h2>My Work</h2>
       </div>
       <div class="projectsContainerList">
         <!-- drive solo projec -->
-          <div class="projects galleryCell">
+          <div class="projects" data-aos="zoom-in-up" data-aos-duration="1000">
+            <p>First responsive PSD project completed using only clearfix and floats.</p>
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
               <i class="devicon-sass-original colored"></i>
             </div>
-            <p>First responsive PSD project completed using only floats.</p>
             <div class="projectLinks">
               <a href="https://jamche.github.io/jamieYeungProjectOne/">Live</a>
               <a href="https://github.com/jamche/jamieYeungProjectOne">Github</a>
@@ -106,13 +175,13 @@
             <img src="assets/carProject.png" alt="">
           </div>
           <!-- project two yoga -->
-          <div class="projects galleryCell">
+          <div class="projects">
+            <p>First multi page responsive PSD project using flexbox and making our own decision on the mobile design.</p>
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
               <i class="devicon-sass-original colored"></i>
             </div>
-            <p>First multi page responsive PSD project using flexbox and making our own decision on the mobile design.</p>
             <div class="projectLinks">
               <a href="https://jamche.github.io/jamieYeungProjectTwo/">Live</a>
               <a href="https://github.com/jamche/jamieYeungProjectTwo">Github</a>
@@ -120,7 +189,8 @@
             <img src="assets/mindSoul.png" alt="">
           </div>
           <!-- group jquery or group react -->
-          <div class="projects galleryCell">
+          <div class="projects">
+            <p>A paired jQuery project using The MovieDB API  which recommends a movie or tv show to watch based on the genre and mood the user selects. Created with Tommy Lay</p>
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
@@ -128,7 +198,6 @@
               <i class="devicon-jquery-plain colored"></i>
               <i class="devicon-git-plain colored"></i>
             </div>
-            <p>A paired jQuery project using The MovieDB API  which recommends a movie or tv show to watch based on the genre and mood the user selects. Created with Tommy Lay</p>
             <div class="projectLinks">
               <a href="https://codewithtommy.github.io/helpMeWatch/">Live</a>
               <a href="https://github.com/codewithtommy/helpMeWatch/">Github</a>
@@ -136,13 +205,13 @@
             <img src="assets/movieProjectL.jpg" alt="">
           </div>
           <!-- react project -->
-          <div class="projects galleryCell">
+          <div class="projects">
+            <p>First React project using the NY Times Books API to provide the user with a book recommendation from the NY Times best sellers of the week.</p>
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
               <i class="devicon-react-original colored"></i>
             </div>
-            <p>First React project using the NY Times Books API to provide the user with a book recommendation from the NY Times best sellers of the week.</p>
             <div class="projectLinks">
               <a href="https://jamche.github.io/jamieYeungRandomBookProject/">Live</a>
               <a href="https://github.com/jamche/jamieYeungRandomBookProject">Github</a>
@@ -150,7 +219,8 @@
             <img src="assets/randomBook.png" alt=""></a>
           </div>
           <!-- group jquery or group react -->
-          <div class="projects galleryCell">
+          <div class="projects">
+            <p>A group project using React & Ticketmaster API, allowing users the option to choose seperate events at a similar time and location. Created with Can Rozanes, Annie Liew & Irene Truong</p>
             <div class="projectsIcon">
               <i class="devicon-html5-plain colored"></i>
               <i class="devicon-css3-plain colored"></i>
@@ -159,7 +229,6 @@
               <i class="devicon-git-plain colored"></i>
               <i class="devicon-github-plain colored"></i>
             </div>
-            <p>A group project using React & Ticketmaster API, allowing users the option to choose seperate events at a similar time and location. Created with Can Rozanes, Annie Liew & Irene Truong</p>
             <div class="projectLinks">
               <a href="https://caij-consulting.github.io/personal-date-night/">Live</a>
               <a href="https://github.com/caij-consulting/personal-date-night">Github</a>
@@ -172,7 +241,7 @@
 </main>
 <!-- bottom Nav -->
 <footer>
-  <section id="contact">
+  <section id="contact" >
     <div class="bottomNav wrapper">
       <div class="bottomNavContainer">
         <div class="bottomNavTitle">
@@ -200,7 +269,7 @@
           <a href=""><i class="fab fa-linkedin-in"></i></a>
         </div>
         <div class="bottomContact">
-          <p><i class="fas fa-envelope"></i> email: jamieyyw@gmail.com</p>  
+          <p><i class="fas fa-envelope"></i>Email : jamieyyw@gmail.com</p>  
         </div>
       </div>
     </div>
@@ -208,6 +277,7 @@
 </footer>
 
 <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 <script src="script.js"></script>
 </body>

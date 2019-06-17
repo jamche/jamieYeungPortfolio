@@ -13,4 +13,5 @@ $(function () {
     $('.exitMenu').click(function () {
       $('.menu').toggleClass('show');
     });
+  AOS.init();
 });

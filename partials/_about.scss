@@ -25,7 +25,7 @@
       text-align: center;
     }
     p{
-      @include fontHeaders('Raleway', .8rem, black);
+      @include fontHeaders('Raleway', 1rem, black);
       text-align: justify;
       @include media(835px){
         padding: 1% 5%;

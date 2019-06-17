@@ -8,11 +8,16 @@ body{
   background-image: url(../assets/page-bg.jpeg);
   background-repeat: repeat-y;
   background-position: top center;
+  overflow-x: hidden;
 }
 
 .wrapper{
   margin: 0 10%;
   max-width: 1400px;
+  @include media (500px){
+    margin: 0 5%;
+  }
+
 }
 
 h1,h2,h3,h4,h5,h6,ul,li,a,p{

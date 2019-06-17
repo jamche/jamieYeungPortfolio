@@ -189,11 +189,18 @@ body {
   background-image: url(../assets/page-bg.jpeg);
   background-repeat: repeat-y;
   background-position: top center;
+  overflow-x: hidden;
 }
 
 .wrapper {
   margin: 0 10%;
   max-width: 1400px;
+}
+
+@media (max-width: 500px) {
+  .wrapper {
+    margin: 0 5%;
+  }
 }
 
 h1, h2, h3, h4, h5, h6, ul, li, a, p {
@@ -219,12 +226,12 @@ img {
 }
 
 header {
-  background-color: grey;
   background: url(../assets/headerPic.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: 70vh;
+  height: 100vh;
+  opacity: .8;
 }
 
 .container {
@@ -242,14 +249,26 @@ header {
 }
 
 .container .headerTitle {
-  margin-top: 15%;
+  margin-top: 25%;
   text-align: left;
 }
 
 .container .headerTitle h1 {
   font-family: Poppins;
   font-size: 2rem;
-  color: seashell;
+  color: black;
+}
+
+@media (max-width: 700px) {
+  .container .headerTitle {
+    margin-top: 60%;
+  }
+}
+
+@media (max-width: 330px) {
+  .container .headerTitle {
+    margin-top: 100%;
+  }
 }
 
 .container .hamburger,
@@ -293,13 +312,12 @@ header {
     left: 0;
     right: 0;
     background: rgba(0, 0, 0, 0.8);
-    color: white;
   }
 }
 
 @media (max-width: 800px) {
   .container nav {
-    height: 72vh;
+    height: 100vh;
   }
 }
 
@@ -345,8 +363,44 @@ header {
 
 .container nav .navLink a:active,
 .container nav .navLink a:hover {
-  color: #1bf1ad;
+  color: steelblue;
   border-radius: 5px;
+}
+
+.slide-in-left {
+  -webkit-animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-in-left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+/**
+ * ----------------------------------------
+ * animation slide-in-left
+ * ----------------------------------------
+ */
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-1000px);
+    transform: translateX(-1000px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 .aboutContainer {
@@ -395,7 +449,7 @@ h2 {
 
 .aboutContainer p {
   font-family: "Raleway";
-  font-size: 0.8rem;
+  font-size: 1rem;
   color: black;
   text-align: justify;
 }
@@ -529,8 +583,63 @@ h2 {
 }
 
 .skillSquares .skillSquaresRight .skillSquaresIcons .skillSquaresIconsBlock i {
-  font-size: 50px;
+  font-size: 65px;
   margin: 2%;
+}
+
+.skillSquaresIconsBlock {
+  -webkit-perspective: 1000;
+          perspective: 1000;
+  display: inline-block;
+  margin: 5% 0;
+}
+
+.skillSquaresIconsBlock .block {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  position: relative;
+}
+
+.skillSquaresIconsBlock .block:hover {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.skillSquaresIconsBlock .block,
+.skillSquaresIconsBlock .front,
+.skillSquaresIconsBlock .back {
+  width: 65px;
+  height: 65px;
+}
+
+.skillSquaresIconsBlock .front,
+.skillSquaresIconsBlock .back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+}
+
+.skillSquaresIconsBlock .front {
+  z-index: 1;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  text-align: center;
+  background-color: steelblue;
+  padding-top: 15px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-family: "Poppins";
+  font-size: 0.8rem;
+  color: black;
+}
+
+.skillSquaresIconsBlock .back {
+  z-index: 2;
+  /* back side, placed above front */
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
 }
 
 .projectsContainer {
@@ -616,10 +725,6 @@ h2 {
   }
 }
 
-.projectsContainerList .projects .projectsIcon p {
-  font-size: .8rem;
-}
-
 .projectsContainerList .projects .projectLinks {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -635,20 +740,22 @@ h2 {
 .projectsContainerList .projects .projectLinks a {
   font-size: 20px;
   border: 1px solid black;
+  border-radius: 10px;
   margin: 0 5%;
-  padding: 2%;
+  padding: 2% 5%;
   color: black;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
 
 .projectsContainerList .projects a:hover {
-  background: #1bf1ad;
+  background: steelblue;
 }
 
 .projectsContainerList .projects p {
   margin: 2%;
   padding: 0 5%;
+  font-size: 1rem;
 }
 
 @media (max-width: 755px) {
@@ -684,21 +791,6 @@ h2 {
   .flickity-prev-next-button.next {
     right: -5%;
   }
-}
-
-.contactMeForm {
-  text-align: center;
-  margin-top: 3%;
-}
-
-.contactMeForm form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 footer {
@@ -803,9 +895,16 @@ footer .bottomNav .bottomMenu .bottomNavLink a {
   transition: all 0.4s ease;
 }
 
+@media (max-width: 500px) {
+  footer .bottomNav .bottomMenu .bottomNavLink a {
+    width: 25%;
+    margin: 1% auto;
+  }
+}
+
 footer .bottomNav .bottomMenu .bottomNavLink a:active,
 footer .bottomNav .bottomMenu .bottomNavLink a:hover {
-  color: #1bf1ad;
+  color: steelblue;
 }
 
 footer .bottomNav .bottomIconsContainer {
@@ -856,7 +955,7 @@ footer .bottomNav .bottomIconsContainer .bottomContact i {
   margin-right: 2%;
   font-size: 1rem;
   color: seashell;
-  background: black;
+  background: steelblue;
   padding: 2%;
   border-radius: 50%;
   -webkit-transition: all 0.4s ease;
@@ -868,5 +967,5 @@ footer .bottomNav .bottomIconsContainer .bottomIcons i:hover,
 footer .bottomNav .bottomIconsContainer .bottomIcons i:active,
 footer .bottomNav .bottomIconsContainer .bottomContact i:hover,
 footer .bottomNav .bottomIconsContainer .bottomContact i:active {
-  color: #1bf1ad;
+  color: black;
 }

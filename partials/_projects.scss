@@ -43,9 +43,6 @@
             display: none;
           }
         }
-        p{
-          font-size: .8rem;
-        }
       } 
       .projectLinks {
         display: flex;
@@ -56,18 +53,20 @@
         a{
           font-size: 20px;
           border: 1px solid black;
+          border-radius: 10px;
           margin: 0 5%;
-          padding: 2%;
+          padding: 2% 5%;
           color: black;
           transition: all 0.4s ease;
           }
         }
         a:hover{
-          background:#1bf1ad;
+          background:$steelblue;;
         } 
       p{
         margin:2%;
         padding: 0 5%;
+        font-size: 1rem;
       }
     }
   }
