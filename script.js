@@ -10,10 +10,14 @@ $(function () {
     });
     // hamburger
   $('.hamburger').click(function () {
-      $('.menu').toggleClass('show');
+    $('.menu').addClass('show');
+    $('.menu').addClass('slide-in-left');
+    $('.menu').removeClass('slide-out-left');
     });
     $('.exitMenu').click(function () {
-      $('.menu').toggleClass('show');
+      $('.menu').toggleClass('slide-out-left');
+      $('.menu').removeClass('slide-in-left');  
+      // $('.menu').removeClass('slide-out-left')
     });
     // run animate library
   AOS.init();

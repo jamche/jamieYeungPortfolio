@@ -50,6 +50,9 @@
         margin:  1% 2%;
         padding: 0 2%;
         width: 50%;
+        @include media(850px){
+          width: 100%;
+        }
         justify-content: center;
         a{
           font-size: .9rem;
@@ -58,16 +61,37 @@
           margin: 0 5%;
           padding: 2% 5%;
           color: black;
-          transition: all 0.4s ease;
+          z-index: 1;
+          position: relative;
+          overflow: hidden;
+          transition: color 0.4s ease-in-out;
           @include media(360px){
-            padding: 2% 20%;
+            padding: 2% 7%;
             font-size: .7rem;
+            }
           }
+          a::before {
+            content: '';
+            z-index: -1;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 1em;
+            height: 1em;
+            border-radius: 10px;
+            background-color: $steelblue;
+            transform-origin: center;
+            transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
+            transition: transform 0.45s ease-in-out;
+          }
+          a:hover {
+            cursor: pointer;
+            color: #161616;
+          }
+          a:hover::before {
+            transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
           }
         }
-        a:hover{
-          background:$steelblue;;
-        } 
       p{
         margin:1%;
         padding: 0 5%;
@@ -106,3 +130,6 @@
       right:-5%;
     }
   }
+
+// a tag hovers
+
