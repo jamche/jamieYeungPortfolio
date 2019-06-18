@@ -1,8 +1,8 @@
 .projectsContainer{
-  background: url(../assets/projectsBack.jpeg);
-  background-attachment: fixed;
-  background-repeat: repeat-y;
-  background-size: contain;
+  // background: url(../assets/projectsBack.jpeg);
+  // background-attachment: fixed;
+  // background-repeat: repeat-y;
+  // background-size: contain;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -59,6 +59,10 @@
           padding: 2% 5%;
           color: black;
           transition: all 0.4s ease;
+          @include media(360px){
+            padding: 2% 20%;
+            font-size: .7rem;
+          }
           }
         }
         a:hover{
@@ -89,6 +93,7 @@
   @include media(400px){
     width: 26px;
     height: 26px;
+    top:70%;
   }
 }
   .flickity-prev-next-button.previous{

@@ -1,9 +1,9 @@
 .skillSquares{
-  background: url(../assets/backgroundSkills.jpeg);
-  background-position: left;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: repeat-y;
+  // background: url(../assets/backgroundSkills.jpeg);
+  // background-position: left;
+  // background-attachment: fixed;
+  // background-size: cover;
+  // background-repeat: repeat-y;
   display: flex;
   margin: 5% 0;
   @include media(500px){
@@ -19,6 +19,9 @@
   }
   .skillSquaresLeft{
     margin-right: 2.5%;
+    -webkit-box-shadow: 10px 10px 5px 0px $steelblue;
+    -moz-box-shadow: 10px 10px 5px 0px $steelblue;
+    box-shadow: 15px 15px 0px 0px $steelblue;
   }
   .skillSquaresRight{
     // background-image: url(../assets/dots.svg);
@@ -53,6 +56,9 @@
         width: 100%;
         display: flex;
         justify-content: space-evenly;
+        @include media(400px){
+          justify-content: space-around;
+        }
         i{
           font-size: 65px;
           margin: 2%;
@@ -67,6 +73,9 @@
   perspective: 1000;
   display: inline-block;
   margin: 5% 0;
+  @include media(320px){
+    margin: 10% 0;
+  }
   .block{
     transition: 0.5s;
     transform-style: preserve-3d;

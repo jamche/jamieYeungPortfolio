@@ -1,13 +1,13 @@
 .aboutContainer{
-  background: url(../assets/backgroundSkills.jpeg);
-  background-position: center;
-  background-attachment: fixed;
-  background-size: cover;
-  background-repeat: repeat-y;
+  // background: url(../assets/backgroundSkills.jpeg);
+  // background-position: center;
+  // background-attachment: fixed;
+  // background-size: cover;
+  // background-repeat: repeat-y;
   display: flex;
   margin-top: 2%;
   @include media(1100px){
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
   .aboutPicture,
   .aboutText{
