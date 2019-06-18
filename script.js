@@ -18,6 +18,9 @@ $(function () {
       $('.menu').toggleClass('slide-out-left');
       $('.menu').removeClass('slide-in-left');  
     });
+  $('.clickClose').click(function(){
+    $('.menu').removeClass('show');
+  });  
     // run animate library
   AOS.init();
 });

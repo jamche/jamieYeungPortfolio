@@ -1,13 +1,13 @@
 .skillSquares{
   display: flex;
   margin: 5% 0;
-  @include media(500px){
+  @include media(900px){
     flex-direction: column-reverse;
   }
   .skillSquaresLeft,
   .skillSquaresRight{
     width: 45%;
-    @include media(500px){
+    @include media(900px){
       width: 100%;
       margin: 2% 0;
     }

@@ -608,7 +608,7 @@ h2 {
   margin: 5% 0;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .skillSquares {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -622,7 +622,7 @@ h2 {
   width: 45%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 900px) {
   .skillSquares .skillSquaresLeft,
   .skillSquares .skillSquaresRight {
     width: 100%;
