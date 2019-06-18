@@ -17,8 +17,9 @@
     img{
     -webkit-box-shadow: 10px 10px 5px 0px $steelblue;
     -moz-box-shadow: 10px 10px 5px 0px $steelblue;
-    box-shadow: 15px 15px 0px 0px $steelblue;
+    box-shadow: 20px 20px 0px 10px $steelblue;
     }
+    
   }
   .skillSquaresRight{
     display: flex;
@@ -27,7 +28,7 @@
     justify-content: center;
     @include media (835px){
       margin: 0;
-      width: 50%;
+      width: 100%;
       background: none;
       @include media (500px){
         width: 100%;

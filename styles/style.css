@@ -636,7 +636,7 @@ h2 {
 
 .skillSquares .skillSquaresLeft img {
   -webkit-box-shadow: 10px 10px 5px 0px steelblue;
-  box-shadow: 15px 15px 0px 0px steelblue;
+  box-shadow: 20px 20px 0px 10px steelblue;
 }
 
 .skillSquares .skillSquaresRight {
@@ -656,7 +656,7 @@ h2 {
 @media (max-width: 835px) {
   .skillSquares .skillSquaresRight {
     margin: 0;
-    width: 50%;
+    width: 100%;
     background: none;
   }
 }
