@@ -1,9 +1,4 @@
 .skillSquares{
-  // background: url(../assets/backgroundSkills.jpeg);
-  // background-position: left;
-  // background-attachment: fixed;
-  // background-size: cover;
-  // background-repeat: repeat-y;
   display: flex;
   margin: 5% 0;
   @include media(500px){
@@ -26,10 +21,6 @@
     }
   }
   .skillSquaresRight{
-    // background-image: url(../assets/dots.svg);
-    // background-size: contain;
-    // background-repeat: no-repeat;
-    // background-position:center 60%;
     display: flex;
     flex-direction: column;
     margin-left:2.5%;

@@ -17,7 +17,6 @@ $(function () {
     $('.exitMenu').click(function () {
       $('.menu').toggleClass('slide-out-left');
       $('.menu').removeClass('slide-in-left');  
-      // $('.menu').removeClass('slide-out-left')
     });
     // run animate library
   AOS.init();
