@@ -632,6 +632,9 @@ h2 {
 
 .skillSquares .skillSquaresLeft {
   margin-right: 2.5%;
+}
+
+.skillSquares .skillSquaresLeft img {
   -webkit-box-shadow: 10px 10px 5px 0px steelblue;
   box-shadow: 15px 15px 0px 0px steelblue;
 }

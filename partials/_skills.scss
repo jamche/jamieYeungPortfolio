@@ -19,9 +19,11 @@
   }
   .skillSquaresLeft{
     margin-right: 2.5%;
+    img{
     -webkit-box-shadow: 10px 10px 5px 0px $steelblue;
     -moz-box-shadow: 10px 10px 5px 0px $steelblue;
     box-shadow: 15px 15px 0px 0px $steelblue;
+    }
   }
   .skillSquaresRight{
     // background-image: url(../assets/dots.svg);
