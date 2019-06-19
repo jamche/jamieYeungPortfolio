@@ -838,6 +838,16 @@ h2 {
   }
 }
 
+@media (max-width: 390px) {
+  .projectsContainerList .projectOne,
+  .projectsContainerList .projectTwo,
+  .projectsContainerList .projectThree,
+  .projectsContainerList .projectFour,
+  .projectsContainerList .projectFive {
+    margin: 15% 0;
+  }
+}
+
 .projectsContainerList .projectOne {
   margin-top: 2.5%;
 }
@@ -923,6 +933,12 @@ h2 {
   font-weight: 500;
 }
 
+@media (max-width: 390px) {
+  .projectsContainerList .projectsContent h3 {
+    font-size: 1.2rem;
+  }
+}
+
 .projectsContainerList .projectsContent p {
   font-family: "Raleway";
   font-size: 1rem;
@@ -938,6 +954,13 @@ h2 {
     padding: 0;
     margin: 2% 0;
     text-align: center;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 390px) {
+  .projectsContainerList .projectsContent p {
+    font-size: .8rem;
+    padding: 0 4%;
   }
 }
 
@@ -1002,7 +1025,9 @@ h2 {
 }
 
 .projectsContainerList .projectsContent .projectLinks a {
+  font-family: "Raleway";
   font-size: 1rem;
+  color: black;
   border: 1px solid black;
   border-radius: 10px;
   margin-right: 2%;
@@ -1066,6 +1091,18 @@ h2 {
   .projectsContainerList .projectImage {
     width: 100%;
     margin-top: 5%;
+  }
+}
+
+@media (max-width: 900px) and (max-width: 600px) {
+  .projectsContainerList .projectImage {
+    margin: 10% 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .projectsContainerList .projectFive .projectImage {
+    margin-bottom: 5%;
   }
 }
 
@@ -1157,6 +1194,12 @@ footer .bottomNav .bottomMenu .bottomNavLink {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 390px) {
+  footer .bottomNav .bottomMenu .bottomNavLink {
+    font-size: .8rem;
   }
 }
 

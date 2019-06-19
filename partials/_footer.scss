@@ -40,6 +40,9 @@ footer{
         @include media(780px){
           flex-direction: column;
         }
+        @include media (390px){
+          font-size: .8rem;
+        }
         a{
           color:black;
           transition: all 0.4s ease;
