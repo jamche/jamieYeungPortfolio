@@ -22,7 +22,9 @@ $(function () {
     });
   $('.clickClose').click(function(){
     $('.menu').removeClass('show');
+    $('.hamburger').css('visibility','visible');
   });  
     // run animate library
-  AOS.init();
+  AOS.init({ disable: window.innerWidth < 500 });
+
 });
