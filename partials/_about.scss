@@ -27,6 +27,8 @@
       }
     }
   .aboutPicture{  
+    display: flex;
+    align-items: center;
     @include media(762px){
       margin: 2% auto;
     }

@@ -186,7 +186,6 @@ html {
 
 body {
   background-color: #F5F5F5;
-  background-image: url(../assets/page-bg.jpeg);
   background-repeat: repeat-y;
   background-position: top center;
   overflow-x: hidden;
@@ -225,6 +224,12 @@ img {
   width: 100%;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 header {
   background: url(../assets/headerPic.jpg);
   background-size: cover;
@@ -234,7 +239,7 @@ header {
   position: relative;
 }
 
-@media (max-width: 340px) {
+@media (max-width: 360px) {
   header {
     background-position-x: -400px;
   }
@@ -268,21 +273,21 @@ header {
   text-align: left;
 }
 
+@media (max-width: 700px) {
+  .container .headerTitle {
+    margin-top: 80%;
+  }
+}
+
 .container .headerTitle h1 {
   font-family: Poppins;
   font-size: 3rem;
   color: seashell;
 }
 
-@media (max-width: 700px) {
-  .container .headerTitle {
-    margin-top: 60%;
-  }
-}
-
-@media (max-width: 330px) {
-  .container .headerTitle {
-    margin-top: 100%;
+@media (max-width: 360px) {
+  .container .headerTitle h1 {
+    font-size: 2rem;
   }
 }
 
@@ -298,7 +303,7 @@ header {
     position: relative;
     top: 0;
     left: 30px;
-    color: black;
+    color: seashell;
     position: absolute;
     top: 20px;
     z-index: 100;
@@ -379,13 +384,13 @@ header {
 
 .container nav .navLink a:active,
 .container nav .navLink a:hover {
-  color: steelblue;
+  color: #68b0ab;
   border-radius: 5px;
 }
 
 .fade-in {
-  -webkit-animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
-  animation: fade-in 1.5s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  -webkit-animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fade-in 2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 /**
@@ -498,7 +503,7 @@ span::before {
   bottom: 0;
   width: 100%;
   height: 2px;
-  background-color: steelblue;
+  background-color: #68b0ab;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: translate(-50%, 0) scaleX(0);
@@ -564,6 +569,15 @@ h2 {
   .aboutContainer p {
     padding: 1% 5%;
   }
+}
+
+.aboutContainer .aboutPicture {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media (max-width: 762px) {
@@ -635,8 +649,15 @@ h2 {
 }
 
 .skillSquares .skillSquaresLeft img {
-  -webkit-box-shadow: 10px 10px 5px 0px steelblue;
-  box-shadow: 20px 20px 0px 10px steelblue;
+  -webkit-box-shadow: 10px 10px 5px 0px #68b0ab;
+  box-shadow: 20px 20px 0px 10px #68b0ab;
+}
+
+@media (max-width: 900px) {
+  .skillSquares .skillSquaresLeft img {
+    -webkit-box-shadow: 10px 10px 0 0 #68b0ab;
+            box-shadow: 10px 10px 0 0 #68b0ab;
+  }
 }
 
 .skillSquares .skillSquaresRight {
@@ -747,7 +768,7 @@ h2 {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
   text-align: center;
-  background-color: steelblue;
+  background-color: #68b0ab;
   padding-top: 15px;
   border-radius: 10px;
   font-weight: 700;
@@ -789,34 +810,138 @@ h2 {
 }
 
 .projectsContainerList {
-  display: block;
   width: 100%;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   margin: 2% 0;
 }
 
-.projectsContainerList .projects {
+.projectsContainerList .projectOne,
+.projectsContainerList .projectTwo,
+.projectsContainerList .projectThree,
+.projectsContainerList .projectFour,
+.projectsContainerList .projectFive {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100%;
-  margin: 0 2%;
-  text-align: center;
-  font-family: "Raleway";
-  font-size: 0.8rem;
-  color: black;
+  margin: 10% 0;
 }
 
-.projectsContainerList .projects .projectsIcon {
+@media (max-width: 900px) {
+  .projectsContainerList .projectOne,
+  .projectsContainerList .projectTwo,
+  .projectsContainerList .projectThree,
+  .projectsContainerList .projectFour,
+  .projectsContainerList .projectFive {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.projectsContainerList .projectOne {
+  margin-top: 2.5%;
+}
+
+.projectsContainerList .projectTwo,
+.projectsContainerList .projectFour {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+@media (max-width: 900px) {
+  .projectsContainerList .projectTwo,
+  .projectsContainerList .projectFour {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.projectsContainerList .projectTwo .projectsContent p,
+.projectsContainerList .projectFour .projectsContent p {
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .projectsContainerList .projectTwo .projectsContent p,
+  .projectsContainerList .projectFour .projectsContent p {
+    text-align: center;
+  }
+}
+
+.projectsContainerList .projectTwo .projectsContent .projectsIcon,
+.projectsContainerList .projectFour .projectsContent .projectsIcon {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .projectsContainerList .projectTwo .projectsContent .projectsIcon,
+  .projectsContainerList .projectFour .projectsContent .projectsIcon {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.projectsContainerList .projectTwo .projectsContent .projectLinks,
+.projectsContainerList .projectFour .projectsContent .projectLinks {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .projectsContainerList .projectTwo .projectsContent .projectLinks,
+  .projectsContainerList .projectFour .projectsContent .projectLinks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.projectsContainerList .projectsContent {
+  width: 50%;
+}
+
+@media (max-width: 900px) {
+  .projectsContainerList .projectsContent {
+    width: 100%;
+  }
+}
+
+.projectsContainerList .projectsContent h3 {
+  font-family: "Poppins";
+  font-size: 1.5rem;
+  color: black;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+}
+
+.projectsContainerList .projectsContent p {
+  font-family: "Raleway";
+  font-size: 1rem;
+  color: black;
+  margin: 1%;
+  line-height: 1.5;
+  font-size: 1rem;
+  text-align: left;
+}
+
+@media (max-width: 900px) {
+  .projectsContainerList .projectsContent p {
+    padding: 0;
+    margin: 2% 0;
+    text-align: center;
+  }
+}
+
+.projectsContainerList .projectsContent .projectsIcon {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -825,48 +950,63 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  font-size: 1rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 1% 0;
+  font-size: 2rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 2% 0;
 }
 
-.projectsContainerList .projects .projectsIcon i {
-  font-size: 1.5rem;
-  margin: 0 5px;
-}
-
-@media (max-width: 320px) {
-  .projectsContainerList .projects .projectsIcon i {
-    display: none;
+@media (max-width: 900px) {
+  .projectsContainerList .projectsContent .projectsIcon {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
-.projectsContainerList .projects .projectLinks {
+.projectsContainerList .projectsContent .projectsIcon i {
+  font-size: 50px;
+  margin: 1%;
+}
+
+@media (max-width: 550px) {
+  .projectsContainerList .projectsContent .projectsIcon i {
+    font-size: 35px;
+    margin: 2%;
+  }
+}
+
+.projectsContainerList .projectsContent .projectLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 1% 2%;
-  padding: 0 2%;
-  width: 50%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 100%;
 }
 
-@media (max-width: 850px) {
-  .projectsContainerList .projects .projectLinks {
-    width: 100%;
+@media (max-width: 900px) {
+  .projectsContainerList .projectsContent .projectLinks {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 
-.projectsContainerList .projects .projectLinks a {
-  font-size: .9rem;
+@media (max-width: 550px) {
+  .projectsContainerList .projectsContent .projectLinks {
+    margin: 2% 0;
+  }
+}
+
+.projectsContainerList .projectsContent .projectLinks a {
+  font-size: 1rem;
   border: 1px solid black;
   border-radius: 10px;
-  margin: 0 5%;
-  padding: 2% 5%;
+  margin-right: 2%;
+  padding: 1% 5%;
   color: black;
   z-index: 1;
   position: relative;
@@ -875,14 +1015,20 @@ h2 {
   transition: color 0.4s ease-in-out;
 }
 
-@media (max-width: 360px) {
-  .projectsContainerList .projects .projectLinks a {
-    padding: 2% 7%;
-    font-size: .7rem;
+@media (max-width: 900px) {
+  .projectsContainerList .projectsContent .projectLinks a {
+    margin: 0;
+    margin-right: 5%;
   }
 }
 
-.projectsContainerList .projects .projectLinks a::before {
+@media (max-width: 360px) {
+  .projectsContainerList .projectsContent .projectLinks a {
+    padding: 1% 3%;
+  }
+}
+
+.projectsContainerList .projectsContent .projectLinks a::before {
   content: '';
   z-index: -1;
   position: absolute;
@@ -891,7 +1037,7 @@ h2 {
   width: 1em;
   height: 1em;
   border-radius: 10px;
-  background-color: steelblue;
+  background-color: #68b0ab;
   -webkit-transform-origin: center;
           transform-origin: center;
   -webkit-transform: translate3d(-50%, -50%, 0) scale3d(0, 0, 0);
@@ -902,68 +1048,31 @@ h2 {
   transition: transform 0.45s ease-in-out, -webkit-transform 0.45s ease-in-out;
 }
 
-.projectsContainerList .projects .projectLinks a:hover {
+.projectsContainerList .projectsContent .projectLinks a:hover {
   cursor: pointer;
   color: #161616;
 }
 
-.projectsContainerList .projects .projectLinks a:hover::before {
+.projectsContainerList .projectsContent .projectLinks a:hover::before {
   -webkit-transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
           transform: translate3d(-50%, -50%, 0) scale3d(15, 15, 15);
 }
 
-.projectsContainerList .projects p {
-  margin: 1%;
-  padding: 0 5%;
-  font-size: 1rem;
-  text-align: left;
+.projectsContainerList .projectImage {
+  width: 50%;
 }
 
-@media (max-width: 400px) {
-  .projectsContainerList .projects p {
-    font-size: .7rem;
-  }
-}
-
-@media (max-width: 755px) {
-  .galleryCell {
-    top: 10%;
-  }
-}
-
-@media (max-width: 550px) {
-  .galleryCell {
-    top: 0;
-  }
-}
-
-.flickity-prev-next-button {
-  top: 60%;
-}
-
-@media (max-width: 400px) {
-  .flickity-prev-next-button {
-    width: 26px;
-    height: 26px;
-    top: 70%;
-  }
-}
-
-@media (max-width: 592px) {
-  .flickity-prev-next-button.previous {
-    left: -5%;
-  }
-}
-
-@media (max-width: 592px) {
-  .flickity-prev-next-button.next {
-    right: -5%;
+@media (max-width: 900px) {
+  .projectsContainerList .projectImage {
+    width: 100%;
+    margin-top: 5%;
   }
 }
 
 footer {
   margin-top: 2%;
   border-top: 1px solid rgba(0, 0, 0, 0.05);
+  background: #68b0ab;
 }
 
 @media (max-width: 550px) {
@@ -1026,16 +1135,10 @@ footer .bottomNav .bottomNavContainer {
           flex-direction: column;
 }
 
-footer .bottomNav .bottomNavTitle {
-  font-family: "Poppins";
-  font-size: 0.85rem;
-  color: black;
-}
-
 footer .bottomNav .bottomMenu {
   margin: 2% 0;
   font-family: "Poppins";
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: black;
 }
 
@@ -1070,9 +1173,31 @@ footer .bottomNav .bottomMenu .bottomNavLink a {
   }
 }
 
-footer .bottomNav .bottomMenu .bottomNavLink a:active,
-footer .bottomNav .bottomMenu .bottomNavLink a:hover {
-  color: steelblue;
+footer .bottomNav .bottomMenu .bottomNavLink span {
+  position: relative;
+}
+
+footer .bottomNav .bottomMenu .bottomNavLink span::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: translate(-50%, 0) scaleX(0);
+          transform: translate(-50%, 0) scaleX(0);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+footer .bottomNav .bottomMenu .bottomNavLink span:hover::before {
+  -webkit-transform: translate(-50%, 0) scaleX(1);
+          transform: translate(-50%, 0) scaleX(1);
 }
 
 footer .bottomNav .bottomIconsContainer {
@@ -1102,7 +1227,13 @@ footer .bottomNav .bottomIconsContainer .bottomContact {
   footer .bottomNav .bottomIconsContainer .bottomIcons,
   footer .bottomNav .bottomIconsContainer .bottomContact {
     text-align: center;
+    margin: 3% 0;
   }
+}
+
+footer .bottomNav .bottomIconsContainer .bottomIcons a,
+footer .bottomNav .bottomIconsContainer .bottomContact a {
+  color: black;
 }
 
 footer .bottomNav .bottomIconsContainer .bottomIcons p,
@@ -1123,7 +1254,7 @@ footer .bottomNav .bottomIconsContainer .bottomContact i {
   margin-right: 2%;
   font-size: 1rem;
   color: seashell;
-  background: steelblue;
+  background: black;
   padding: 2%;
   border-radius: 50%;
   -webkit-transition: all 0.4s ease;
@@ -1135,5 +1266,30 @@ footer .bottomNav .bottomIconsContainer .bottomIcons i:hover,
 footer .bottomNav .bottomIconsContainer .bottomIcons i:active,
 footer .bottomNav .bottomIconsContainer .bottomContact i:hover,
 footer .bottomNav .bottomIconsContainer .bottomContact i:active {
+  color: #68b0ab;
+}
+
+footer .credits {
+  margin-top: 2%;
+  text-align: center;
+  font-family: "Raleway";
+  font-size: 1rem;
   color: black;
+}
+
+@media (max-width: 360px) {
+  footer .credits {
+    margin-top: 5%;
+    font-size: .8rem;
+  }
+}
+
+footer .credits h3 {
+  font-family: "Poppins";
+  font-size: 1rem;
+  color: black;
+}
+
+footer .credits p {
+  font-size: .8rem;
 }

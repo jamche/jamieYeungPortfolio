@@ -5,7 +5,7 @@ header{
   background-repeat:no-repeat; 
   height:100vh;
   position: relative;
-  @include media(340px){
+  @include media(360px){
     background-position-x: -400px;
   }
 }
@@ -27,16 +27,15 @@ header{
   .headerTitle{
   margin-top: 25%;
   text-align: left;
+  @include media(700px){
+    margin-top: 80%;
+  }
       h1{
       @include fontHeaders(Poppins, 3rem, seashell);
+      @include media (360px){
+      font-size: 2rem;
+      }
     }
-    @include media (700px){
-      margin-top: 60%;
-    }
-    @include media (330px){
-      margin-top: 100%;
-    }
-
   }
     .hamburger,
     .exitMenu{
@@ -49,7 +48,7 @@ header{
         position: relative;
         top: 0;
         left: 30px;
-        color: black;
+        color: seashell;
         position: absolute;
         top: 20px;
         z-index: 100;
@@ -111,8 +110,8 @@ header{
 }
 // header h1 flicker in
 .fade-in {
-	-webkit-animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-	        animation: fade-in 1.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	-webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	        animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 /**
  * ----------------------------------------
