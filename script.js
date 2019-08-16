@@ -25,6 +25,10 @@ $(function () {
     $('.hamburger').css('visibility','visible');
   });  
     // run animate library
-  AOS.init({ disable: window.innerWidth < 500 });
+  AOS.init({ 
+    disable: window.innerWidth < 500,
+    easing: 'ease',
+    once: true
+  });
 
 });
